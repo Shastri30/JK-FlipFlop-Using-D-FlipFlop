@@ -23,8 +23,13 @@ begin
 
     clk = 0;
 
-    $display("Time\tJ\tK\tQ");
-    $monitor("%0t\t%b\t%b\t%b",$time,j,k,q);
+    $display("%-12s %-6s %-6s %-6s", "Time", "J", "K", "Q");
+
+$monitor("%-12d %-6b %-6b %-6b",
+         $time,
+         j,
+         k,
+         q);
 
     j = 0; k = 0;
     #10;
